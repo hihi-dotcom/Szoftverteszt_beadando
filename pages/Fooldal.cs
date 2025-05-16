@@ -19,6 +19,7 @@ namespace Szoftverteszt_beadando.pages
         ReadOnlyCollection<IWebElement> kedvencekButtons => driver.FindElements(By.Id("kedvencek"));
         IWebElement TermekekListazva => driver.FindElement(By.Id("termekLista"));
         IWebElement BeallitasoldalGomb => driver.FindElement(By.Id("beallitasok"));
+        IWebElement KedvencekOldalGomb => driver.FindElement(By.Id("tokedvenc"));
         IWebElement EltuntetesGomb => driver.FindElement(By.Id("toggleTermekek"));
         IWebElement Alert => driver.FindElement(By.ClassName("alert"));
         public Fooldal(IWebDriver driver) : base(driver)
@@ -62,6 +63,10 @@ namespace Szoftverteszt_beadando.pages
         public void GoToBeallitasok()
         {
             BeallitasoldalGomb.Click();
+        }
+        public void GoToKedvencek()
+        {
+            KedvencekOldalGomb.Click();
         }
 
         public void ShowOrNotShowTermekek()

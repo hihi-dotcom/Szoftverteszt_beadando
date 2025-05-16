@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.ObjectModel;
+using Szoftverteszt_beadando.pages;
 
 namespace Szoftverteszt_beadando.tests
 {
@@ -29,7 +30,13 @@ namespace Szoftverteszt_beadando.tests
         public void BeallitasokGombNavigatesToSettingsPerfectly()
         {
             fo_Oldal.GoToBeallitasok();
-            //Assert.AreEqual(Beallitasok_oldal.URL, driver.Url);
+            Assert.AreEqual(Beallitasok_oldal.URL, driver.Url);
+        }
+        [Test]
+        public void KedvencekGombNavigatesToKedvencekPerfectly()
+        {
+            fo_Oldal.GoToKedvencek();
+            Assert.AreEqual(Kedvencek_oldal.URL, driver.Url);
         }
 
         [Test]
